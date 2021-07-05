@@ -1,4 +1,4 @@
-import { setCount,setPeople,setPage, SET_SAGA_STATE, SetSagaStateType, setError, setInit} from "../Reducers/mainReducer";
+import { setCount,setPeople,setPage, SET_SAGA_STATE, SetSagaStateType, setError, setInit} from "../Reducers/peopleReducer";
 import {call, fork, put, takeEvery, takeLatest} from "redux-saga/effects"
 import { getPeople, GetPeopleType } from "../../DAL/Api";
 

@@ -1,17 +1,17 @@
 import {AppStateType} from "../store"
 
 export const peopleSelector=(state:AppStateType)=>{
-    return state.main.people
+    return state.people.people
 }
 export const countSelector=(state:AppStateType)=>{
-    return state.main.count
+    return state.people.count
 }
 export const pageSelector=(state:AppStateType)=>{
-    return state.main.page
+    return state.people.page
 }
 export const initSelector=(state:AppStateType)=>{
-    return state.main.isInit
+    return state.people.isInit
 }
 export const errorSelector=(state:AppStateType)=>{
-    return state.main.errorLog
+    return state.people.errorLog
 }

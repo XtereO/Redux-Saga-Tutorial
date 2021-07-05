@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PeopleType } from "../Types/Types";
+import { PeopleType, PlanetType } from "../Types/Types";
 
 
 const instance=axios.create({
@@ -14,5 +14,16 @@ export type GetPeopleType={
 }
 export const getPeople=(page:number)=>{
     return instance.get<GetPeopleType>(`people?page=${page}`)
+    .then(r=>r.data)
+}
+
+export type GetPlanetType={
+    count:number
+    next:string
+    previous:string
+    results:PlanetType[]
+}
+export const getPlanet=(page:number)=>{
+    return instance.get<GetPlanetType>(`planets?page=${page}`)
     .then(r=>r.data)
 }

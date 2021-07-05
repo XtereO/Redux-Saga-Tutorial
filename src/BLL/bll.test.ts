@@ -1,6 +1,6 @@
 
 import { PeopleType } from "../Types/Types";
-import { mainReducer, setError, setInit } from "./Reducers/mainReducer";
+import { mainReducer, setError, setInit } from "./Reducers/peopleReducer";
 
 const initialState={
     people:[] as PeopleType[],
@@ -15,10 +15,10 @@ it("error work correct",()=>{
     let state={...initialState}
     
     //dispatch
-    state=mainReducer(state,setError("Something is goes bad"))
+    state=mainReducer(state,setError("Something went wrong"))
 
     //result
-    expect(state.errorLog).toBe('Something is goes bad')
+    expect(state.errorLog).toBe('Something went wrong')
 })
 it("Init set correctly",()=>{
     //load data
